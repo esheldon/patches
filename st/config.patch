@@ -1,0 +1,101 @@
+--- config.h	2016-12-08 14:08:23.632309953 -0500
++++ myconfig.h	2016-12-08 13:59:27.692495510 -0500
+@@ -5,7 +5,12 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++//static char font[] = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++//static char font[] = "-*-terminus-medium-*-normal-*-12-*-*-*-*-*-*-*";
++//static char font[] = "terminus:pixelsize=12";
++static char font[] = "fixed:pixelsize=13:style=semicondensed";
++//static char font[] = "inconsolata:pixelsize=16:antialias=true:autohint=false";
++
+ static int borderpx = 2;
+ 
+ /*
+@@ -86,21 +91,44 @@
+ static const char *colorname[] = {
+ 	/* 8 normal colors */
+ 	"black",
+-	"red3",
+-	"green3",
+-	"yellow3",
+-	"blue2",
+-	"magenta3",
++
++	/*"red3",*/
++    "#ff6600",
++
++	/*"green3",*/
++    "#99ff99",
++
++	/*"yellow3",*/
++    "#ffff66",
++
++	/*"blue2",*/
++    "#99ccff",
++
++	/*"magenta3",*/
++    "plum",
++
+ 	"cyan3",
+ 	"gray90",
+ 
+ 	/* 8 bright colors */
+ 	"gray50",
+-	"red",
+-	"green",
+-	"yellow",
+-	"#5c5cff",
+-	"magenta",
++
++	//"red",
++    "#ff6600",
++
++	/*"green",*/
++    "#99ff99",
++
++	/*"yellow",*/
++    "#ffff66",
++
++    /* a blue */
++	/* "#5c5cff", */
++    "#99ccff",
++
++	/*"magenta",*/
++    "#ff6699",
++
+ 	"cyan",
+ 	"white",
+ 
+@@ -109,6 +137,13 @@
+ 	/* more colors can be added after 255 to use with DefaultXX */
+ 	"#cccccc",
+ 	"#555555",
++
++
++    /* 258 for background */
++    "#1f1f1f",
++    /* 259 for foreground */
++    "#dcdccc",
++
+ };
+ 
+ 
+@@ -116,9 +151,12 @@
+  * Default colors (colorname index)
+  * foreground, background, cursor, reverse cursor
+  */
+-static unsigned int defaultfg = 7;
+-static unsigned int defaultbg = 0;
+-static unsigned int defaultcs = 256;
++//static unsigned int defaultfg = 7;
++static unsigned int defaultfg = 259;
++//static unsigned int defaultbg = 0;
++static unsigned int defaultbg = 258;
++//static unsigned int defaultcs = 256;
++static unsigned int defaultcs = 11;
+ static unsigned int defaultrcs = 257;
+ 
+ /*
